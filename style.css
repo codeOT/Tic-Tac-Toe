@@ -1,0 +1,128 @@
+/* styles.css */
+body {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(90deg, #000428, #004e92);
+}
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #E4E2DD;
+    z-index: 9999;
+}
+.name{
+    color: #fff;
+}
+#loader-text img{
+    width: 300px;
+}
+
+#scoreboard {
+    display: flex;
+    justify-content: space-around;
+    width: 300px;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: #fff;
+}
+
+#mode-selection {
+    margin-bottom: 20px;
+}
+
+#mode-selection button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+}
+.play{
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+    border: none;
+    transition: all ease 0.7s;  
+}
+.play:hover{
+    font-weight: 700;
+}
+.play:focus{
+    background-color: #000428;
+    color: #fff;
+}
+
+#game {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cell:hover {
+    background-color: #e0e0e0;
+}
+
+.cell.clicked {
+    animation: cellClick 0.3s ease forwards;
+}
+
+@keyframes cellClick {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+#status {
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: #fff;
+}
+
+#restart {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+    border: none; 
+    transition: all ease 0.7s;  
+}
+#restart:hover{
+    background-color: #000428;
+    color: #fff;
+}
+
+.cell.computer-move {
+    animation: computerMove 0.5s ease;
+}
+
+@keyframes computerMove {
+    0% { transform: scale(0); }
+    100% { transform: scale(1); }
+}

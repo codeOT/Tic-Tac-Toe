@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="preloader">
+        <div id="loader-text">
+            <img src="./img/codeot.png" alt="" srcset="">
+        </div>
+    </div>
+    <div class="name"><h2>TIC-TAC-TOE</h2></div>
+    <div id="scoreboard">
+        <div id="score-x">Player X: 0</div>
+        <div id="score-o">Player O: 0</div>
+    </div>
+    <div id="mode-selection">
+        <button id="play-user" class="play">Play with User</button>
+        <button id="play-computer" class="play">Play with AI</button>
+    </div>
+    <div id="game">
+        <div class="cell" data-index="0"></div>
+        <div class="cell" data-index="1"></div>
+        <div class="cell" data-index="2"></div>
+        <div class="cell" data-index="3"></div>
+        <div class="cell" data-index="4"></div>
+        <div class="cell" data-index="5"></div>
+        <div class="cell" data-index="6"></div>
+        <div class="cell" data-index="7"></div>
+        <div class="cell" data-index="8"></div>
+    </div>
+    <div id="status"></div>
+    <button id="restart">Restart Game</button>
+    <script src="script.js"></script>
+</body>
+
+</html>
